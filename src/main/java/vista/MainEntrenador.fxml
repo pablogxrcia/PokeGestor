@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" spacing="10.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.Controlador">
+   <children>
+      <ToolBar prefHeight="40.0" prefWidth="200.0">
+        <items>
+            
+            <Button fx:id="btnAdd" contentDisplay="TOP" text="_Añadir">
+               <graphic>
+                  <ImageView fx:id="imgAñadir" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic></Button> 
+            <Button fx:id="btnEdit" contentDisplay="TOP" disable="true" text="_Editar">
+               <graphic>
+                  <ImageView fx:id="imgEditar" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic></Button>
+            <Button fx:id="btnDelete" contentDisplay="TOP" disable="true" text="_Eliminar">
+               <graphic>
+                  <ImageView fx:id="imgEliminar" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic></Button>
+            <Button fx:id="btnExit" contentDisplay="TOP" text="_Salir">
+               <graphic>
+                  <ImageView fx:id="imgSalir" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic></Button>
+            
+        </items>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </ToolBar>
+      <TabPane fx:id="tabPane" prefHeight="352.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Entrenadores">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="600.0">
+                     <center>
+                        <VBox prefHeight="200.0" prefWidth="600.0" spacing="10.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="34.0" prefWidth="600.0" spacing="10.0">
+                                 <children>
+                                    <Label text="Buscar Entrenador" />
+                                    <TextField fx:id="searchFieldEntrenador" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <TableView fx:id="entrenadorTable" prefHeight="290.0" prefWidth="600.0">
+                                <columns>
+                                  <TableColumn fx:id="colID" prefWidth="76" text="ID" />
+                                  <TableColumn fx:id="colNombre" prefWidth="135" text="Nombre" />
+                                    <TableColumn fx:id="colEdad" prefWidth="86" text="Edad" />
+                                    <TableColumn fx:id="colMedallas" prefWidth="86" text="Medallas" />
+                                    <TableColumn fx:id="colRegion" prefWidth="96" text="Región" />
+                                    <TableColumn fx:id="colSexo" prefWidth="98.39998168945317" text="Sexo" />
+                                </columns>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </center>
+                  </BorderPane>
+               </content>
+            </Tab>
+          <Tab text="Pokemons">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="600.0">
+                     <center>
+                        <VBox prefHeight="200.0" prefWidth="600.0" spacing="10.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="34.0" prefWidth="600.0" spacing="10.0">
+                                 <children>
+                                    <Label text="Buscar Pokemon" />
+                                    <TextField fx:id="searchFieldPokemon" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <TableView fx:id="pokemonTable" prefHeight="290.0" prefWidth="600.0">
+                                <columns>
+                                  <TableColumn fx:id="colIDPokemon" prefWidth="76" text="ID" />
+                                  <TableColumn fx:id="colImagenPokemon" prefWidth="136" text="Imagen" />
+                                    <TableColumn fx:id="colTipoPokemon" prefWidth="96" text="Tipo" />
+                                    <TableColumn fx:id="colNombrePokemon" prefWidth="96" text="Nombre" />
+                                    <TableColumn fx:id="colNivelPokemon" prefWidth="76" text="Nivel" />
+                                    <TableColumn fx:id="colPokedexPokemon" prefWidth="98.39998168945317" text="Nº Pokedex" />
+                                </columns>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </center>
+                  </BorderPane>
+               </content>
+          </Tab>
+            <Tab text="Capturas">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="600.0">
+                     <center>
+                        <VBox prefHeight="200.0" prefWidth="600.0" spacing="10.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="34.0" prefWidth="600.0" spacing="10.0">
+                                 <children>
+                                    <Label text="Historial Capturas" />
+                                    <TextField fx:id="searchFieldCaptura" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <TableView fx:id="capturaTable" prefHeight="290.0" prefWidth="600.0">
+                                <columns>
+                                  <TableColumn fx:id="colEntrenadorCaptura" prefWidth="144" text="Entrenador" />
+                                  <TableColumn fx:id="colPokemonCaptura" prefWidth="144" text="Pokemon" />
+                                    <TableColumn fx:id="colLocalizacionCaptura" prefWidth="147.5" text="Localización" />
+                                    <TableColumn fx:id="colFechaCaptura" prefWidth="140.5" text="Fecha" />
+                                </columns>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <VBox.margin>
+                                    <Insets bottom="20.0" left="10.0" right="10.0" />
+                                 </VBox.margin>
+                              </TableView>
+                           </children>
+                        </VBox>
+                     </center>
+                  </BorderPane>
+               </content>
+            </Tab>
+        </tabs>
+         <opaqueInsets>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </opaqueInsets>
+      </TabPane>
+   </children>
+</VBox>
